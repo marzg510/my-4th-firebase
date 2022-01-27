@@ -7,7 +7,7 @@
 ## node.js version
 
 ```bash
-nvm use v12.22.8
+nvm use 12
 ```
 
 ## Create PJ
