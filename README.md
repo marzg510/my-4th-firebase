@@ -40,3 +40,19 @@ npm install firebase
 npm install @nuxtjs/firebase --save
 
 ```
+
+
+## Create New Firebase Project
+
+Firebase Console
+ -> New Project
+   -> my-4th-firebase
+ -> Add WebApp
+   -> MyWebApp -> Entry
+     -> SDK : npm -> Console
+
+## config firebase
+
+plugins/firebase.js(API OPEN OK)
+```
+```
