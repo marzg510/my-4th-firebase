@@ -47,8 +47,26 @@ export default {
       lang: 'en'
     }
   },
+  config: {
+    apiKey: "AIzaSyCnB9FWbC1Le4Fy2sgjCY-peD_DVX7_wcw",
+    authDomain: "my-4th-firebase.firebaseapp.com",
+    projectId: "my-4th-firebase",
+    storageBucket: "my-4th-firebase.appspot.com",
+    messagingSenderId: "504875649325",
+    appId: "1:504875649325:web:acdd7bfd3598780781aba4",
+    measurementId: "G-TJL0JQ0033"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  generate: {
+    dir: 'public'
+  },
+
+  services: {
+    functions: false,
+    analytics: false
+  },
 }
