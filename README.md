@@ -91,3 +91,74 @@ Project Console: https://console.firebase.google.com/project/my-4th-firebase/ove
 Hosting URL: https://my-4th-firebase.web.app
 ```
 
+## functon
+
+```
+npm install --save plugins/firebase
+```
+
+## firebase functions
+
+
+```bash
+$ firebase init
+...
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: my-4th-firebase (my-4th-firebase)
+i  Using project my-4th-firebase (my-4th-firebase)
+
+=== Functions Setup
+
+A functions directory will be created in your project with sample code
+pre-configured. Functions can be deployed with firebase deploy.
+
+
+? What language would you like to use to write Cloud Functions? JavaScript
+? Do you want to use ESLint to catch probable bugs and enforce style? No
+✔  Wrote functions/package.json
+✔  Wrote functions/index.js
+✔  Wrote functions/.gitignore
+? Do you want to install dependencies with npm now? Yes
+...
+```
+
+- index.js
+```js
+const functions = require("firebase-functions");
+
+// // Create and Deploy Your First Cloud Functions
+// // https://firebase.google.com/docs/functions/write-firebase-functions
+//
+exports.helloWorld = functions.https.onRequest((request, response) => {
+  functions.logger.info("Hello logs!", {structuredData: true});
+  response.send("Hello from Firebase!");
+});
+```
+
+- functionsのアカウントをアップグレードしておく（従量制・Blazeプラン)
+
+```
+$ firebase deploy
+...
+✔  functions[helloWorld(asia-northeast1)] Successful create operation.
+Function URL (helloWorld(asia-northeast1)): https://asia-northeast1-my-4th-firebase.cloudfunctions.net/helloWorld
+i  functions: cleaning up build files...
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/my-4th-firebase/overview
+```
+
+## axios
+
+- https://nodejs.kimama-it.blog/nuxtjs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6api%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%AE%E5%87%A6%E7%90%86%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/#st-toc-h-1
+
+```
+npm install --save axios
+```
